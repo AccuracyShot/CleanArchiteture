@@ -1,8 +1,8 @@
 <?php
 
-namespace Alura\Arquitetura\Testes\Aluno;
+namespace Felipe\Arquitetura\Testes\Aluno;
 
-use Alura\Arquitetura\Dominio\Aluno\Telefone;
+use Felipe\Arquitetura\Dominio\Aluno\Telefone;
 use PHPUnit\Framework\TestCase;
 
 class TelefoneTest extends TestCase
@@ -16,14 +16,14 @@ class TelefoneTest extends TestCase
     public function testTelefoneComDddInvalidoNaoDeveExistir()
     {
         $this->expectException(\InvalidArgumentException::class);
-        $this->expectDeprecationMessage('DDD inválido');
+        $this->expectExceptionMessage('DDD inválido');
         new Telefone('ddd', '22222222');
     }
 
     public function testTelefoneComNumeroInvalidoNaoDeveExistir()
     {
         $this->expectException(\InvalidArgumentException::class);
-        $this->expectDeprecationMessage('Número de telefone inválido');
+        $this->expectExceptionMessage('Número de telefone inválido');
         new Telefone('24', 'número');
     }
 }

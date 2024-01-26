@@ -1,6 +1,6 @@
 <?php
 
-namespace Alura\Arquitetura\Dominio\Aluno;
+namespace Felipe\Arquitetura\Dominio\Aluno;
 
 class Telefone
 {
